@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { NgFor, NgClass } from '@angular/common';
+import { NgFor, NgClass, NgIf } from '@angular/common';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NgFor, NgClass],
+  imports: [RouterOutlet, NgFor, NgClass, NgIf],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
@@ -92,6 +92,10 @@ export class AppComponent {
       url: 'https://images.unsplash.com/photo-1477601263568-180e2c6d046e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c25vd3xlbnwwfHwwfHx8MA%3D%3D',
     },
   ];
+
+  checkWindowIndex(index: number) {
+    return Math.abs(this.currentPage - index) < 5;
+  }
 
   // getClass()
   // {
