@@ -7,6 +7,7 @@ import {
   NgSwitch,
   NgSwitchCase,
   NgSwitchDefault,
+  CommonModule,
 } from '@angular/common';
 import { ClassDirective } from './class.directive';
 
@@ -17,11 +18,11 @@ import { ClassDirective } from './class.directive';
     RouterOutlet,
     ClassDirective,
     NgFor,
-    NgClass,
     NgIf,
     NgSwitch,
     NgSwitchCase,
     NgSwitchDefault,
+    CommonModule,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
