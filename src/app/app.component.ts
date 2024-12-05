@@ -1,10 +1,28 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { NgFor, NgClass, NgIf } from '@angular/common';
+import {
+  NgFor,
+  NgClass,
+  NgIf,
+  NgSwitch,
+  NgSwitchCase,
+  NgSwitchDefault,
+} from '@angular/common';
+import { ClassDirective } from './class.directive';
+
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NgFor, NgClass, NgIf],
+  imports: [
+    RouterOutlet,
+    ClassDirective,
+    NgFor,
+    NgClass,
+    NgIf,
+    NgSwitch,
+    NgSwitchCase,
+    NgSwitchDefault,
+  ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
@@ -96,24 +114,4 @@ export class AppComponent {
   checkWindowIndex(index: number) {
     return Math.abs(this.currentPage - index) < 5;
   }
-
-  // getClass()
-  // {
-  //   const classes = [];
-
-  //   if(something())
-  //   {
-  //    classes.push('active');
-  //   }
-  //   if(somethingElse)
-  //   {
-  //     classes.push('something');
-  //   }
-  //   if(yetAnotherCheck)
-  //   {
-  //     classes.push('check');
-  //   }
-  //   return classes;
-
-  // }
 }
